@@ -137,6 +137,8 @@ Acesse a documentação interativa em: `http://localhost:8000/docs`
 
 ### Opção 3: Experimento DART-SQL
 
+Baixe o dataset no link: https://drive.google.com/file/d/1jCXzJhYq-ADqG8oH_V2X34pEYJnuClql/view?usp=sharing e adicione à raiz do projeto.
+
 ```powershell
 python -m experiments.run_experiment
 ```
@@ -285,6 +287,8 @@ equipment_maintenance:
 - **Token Overlap**: Métrica auxiliar de sobreposição de tokens
 
 ### Executar Experimento
+
+Baixe o dataset no link: https://drive.google.com/file/d/1jCXzJhYq-ADqG8oH_V2X34pEYJnuClql/view?usp=sharing e adicione à raiz do projeto.
 
 ```powershell
 python -m experiments.run_experiment
