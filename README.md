@@ -1,3 +1,9 @@
+# Artigos da primeira apresentação e os respectivos ppts
+
+Artur Bôa-Viagem e Caio Fernandes -> Robust Vulnerability Detection in Solidity-Based Ethereum Smart Contracts Using Fine-Tuned Transformer Encoder Models: https://www.canva.com/design/DAG3yYoL5c8/RjEgW-TkPYzhkLieEf4GuA/edit?utm_content=DAG3yYoL5c8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+Kaylane Lira e Roberto Albuquerque -> GPTScan: Detecting Logic Vulnerabilities in Smart Contracts by Combining GPT with Program Analysis: https://docs.google.com/presentation/d/1CoGP7VmlNvjrA1R68RFlCnPPq51oImE5UZ203s_nC_I/edit?usp=sharing
+
 # Projeto TAES - DART-SQL Question Rewriting & SQL Generator
 
 Implementação do módulo de **Question Rewriting** do paper DART-SQL para avaliar seu impacto isolado na geração de SQL, com uma aplicação web interativa para geração de SQL a partir de linguagem natural.
@@ -494,9 +500,3 @@ Baseado no paper DART-SQL (ablação no Spider-dev):
 ## 📝 Licença
 
 Este projeto é parte da pesquisa em avaliação de modelos de linguagem para geração de SQL.
-
----
-
-## ✉️ Contato
-
-Para dúvidas ou sugestões, abra uma issue no repositório.
