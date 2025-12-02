@@ -137,8 +137,6 @@ Acesse a documentação interativa em: `http://localhost:8000/docs`
 
 ### Opção 3: Experimento DART-SQL
 
-Baixe o dataset no link: https://drive.google.com/file/d/1jCXzJhYq-ADqG8oH_V2X34pEYJnuClql/view?usp=sharing e adicione à raiz do projeto.
-
 ```powershell
 python -m experiments.run_experiment
 ```
@@ -282,13 +280,12 @@ equipment_maintenance:
 
 ### Métricas de Avaliação
 
-- **EM (Exact-Set-Match Accuracy)**: Métrica principal - compara cláusulas SQL após remover valores literais
+- **EM (Exact-Set-Match Accuracy)**: Compara cláusulas SQL após remover valores literais
+- **EX (Execution Accuracy)**: Executa as queries SQL nas databases SQLite do Spider e compara os resultados ✅
 - **String Exact Match**: Comparação exata de strings normalizadas
 - **Token Overlap**: Métrica auxiliar de sobreposição de tokens
 
 ### Executar Experimento
-
-Baixe o dataset no link: https://drive.google.com/file/d/1jCXzJhYq-ADqG8oH_V2X34pEYJnuClql/view?usp=sharing e adicione à raiz do projeto.
 
 ```powershell
 python -m experiments.run_experiment
@@ -322,7 +319,8 @@ projeto_taes/
 │   └── spider_loader.py       # Carrega Spider dataset
 ├── evaluation/
 │   ├── __init__.py
-│   └── metrics.py             # Métricas EM, EX, Token Overlap
+│   ├── execution_accuracy.py  # Implementação de EX real
+│   └── metrics.py             # Métricas EM, String Match, Token Overlap
 ├── results/                   # Resultados JSON dos experimentos
 ├── sql_generator.py           # Módulo principal de geração de SQL
 ├── requirements.txt           # Dependências Python
@@ -475,20 +473,21 @@ Baseado no paper DART-SQL (ablação no Spider-dev):
 
 ## ⚠️ Limitações Atuais
 
-- **EX (Execution Accuracy)** requer execução real nas databases SQLite do Spider (não implementado)
-- Usamos **EM (Exact-Set-Match)** como métrica principal proxy
 - Schema extraction depende da estrutura do dataset fornecido
+- Dependência de API paga da OpenAI
+- Requer acesso às databases SQLite do Spider para EX (Execution Accuracy)
 
 ---
 
 ## 🔜 Próximos Passos
 
-1. Implementar EX real executando queries nas databases SQLite
-2. Testar com dataset Spider original (não realistic)
-3. Experimentar variações do prompt de rewriting
-4. Análise qualitativa de casos onde RW ajuda/prejudica
-5. Integração com banco de dados real
-6. Melhorias de UX na interface web
+1. Testar com dataset Spider original (não realistic)
+2. Experimentar variações do prompt de rewriting
+3. Análise qualitativa de casos onde RW ajuda/prejudica
+4. Fine-tuning de prompts para melhorar acurácia
+5. Integração com bancos de dados reais em produção
+6. Melhorias de UX e performance na interface web
+7. Implementar cache de resultados para queries recorrentes
 
 ---
 

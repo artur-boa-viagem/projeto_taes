@@ -19,7 +19,7 @@ from experiments.question_rewriting import generate_sql_with_rewriting
 from experiments.zero_shot_baseline import generate_sql_zero_shot
 from evaluation.metrics import compare_methods
 
-def run_experiment(num_examples=10):
+def run_experiment(num_examples=100):
     """Executa experimento completo conforme metodologia DART-SQL"""
     
     logger.info("="*80)
@@ -155,7 +155,7 @@ def run_experiment(num_examples=10):
 
 if __name__ == "__main__":
     # Configurar número de exemplos para teste
-    NUM_EXAMPLES = 10  # Comece com 10 para validar, depois aumente para 50-100
+    NUM_EXAMPLES = 100 
     
     try:
         results = run_experiment(num_examples=NUM_EXAMPLES)
